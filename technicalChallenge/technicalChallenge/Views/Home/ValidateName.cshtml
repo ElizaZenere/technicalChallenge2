@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Función Validar Nombre";
+}
+@model NameModel
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<div>
+    @using (Html.BeginAntiForgeryForm("Home", "ValidateName", FormMethod.Post))
+    {
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.filter.Name, "Nombre")
+                    @Html.TextBoxFor(m => m.filter.Name, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="submit-section">
+                <input class="btn btn-primary" type="submit" value="Validar Nombre">
+            </div>
+        </div>
+    </div>
+    }
+</div>
