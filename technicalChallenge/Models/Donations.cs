@@ -13,15 +13,15 @@ namespace technicalChallenge.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal idDonation { get; set; }
 
-        [Key]
+
         [Column(Order = 1, TypeName = "numeric")]
         public decimal idSubscriptor { get; set; }
 
-        [Key]
+
         [Column(Order = 2, TypeName = "numeric")]
         public decimal amount { get; set; }
 
-        [Key]
+
         [Column(Order = 3)]
         public DateTime dateDonation { get; set; }
     }

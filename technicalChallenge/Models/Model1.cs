@@ -13,7 +13,6 @@ namespace technicalChallenge
         {
         }
 
-        public virtual DbSet<Persona> Persona { get; set; }
         public virtual DbSet<Donations> Donations { get; set; }
         public virtual DbSet<Intervals> Intervals { get; set; }
         public virtual DbSet<PaymentMethods> PaymentMethods { get; set; }
