@@ -25,15 +25,10 @@ namespace technicalChallenge.Controllers
 
         // GET: api/Donations/5
         [ResponseType(typeof(Donations))]
-        public IHttpActionResult GetDonations(decimal id)
+        public IQueryable<Donations> GetDonations(decimal id)
         {
-            Donations donations = db.Donations.Find(id);
-            if (donations == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(donations);
+            IQueryable<Donations> donations = db.Donations.Where(e =>e.idSubscription == id);
+            return donations;
         }
 
         // PUT: api/Donations/5

@@ -11,7 +11,7 @@ namespace technicalChallenge.Models
         [Key]
         [Column(TypeName = "numeric")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public decimal idSubscriptor { get; set; }
+        public decimal idSubscription { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal? amount { get; set; }

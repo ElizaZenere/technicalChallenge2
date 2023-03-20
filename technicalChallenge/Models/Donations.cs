@@ -15,7 +15,7 @@ namespace technicalChallenge.Models
 
 
         [Column(Order = 1, TypeName = "numeric")]
-        public decimal idSubscriptor { get; set; }
+        public decimal idSubscription { get; set; }
 
 
         [Column(Order = 2, TypeName = "numeric")]

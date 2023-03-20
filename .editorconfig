@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0004: Quitar conversión innecesaria
+dotnet_diagnostic.IDE0004.severity = none

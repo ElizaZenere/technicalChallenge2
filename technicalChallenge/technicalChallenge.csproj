@@ -160,9 +160,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DonationsController.cs" />
     <Compile Include="Controllers\IntervalsController.cs" />
+    <Compile Include="Controllers\PaymentMethodsController.cs" />
+    <Compile Include="Controllers\SubscriptionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataSubscriptions.cs" />
     <Compile Include="Models\Donations.cs" />
     <Compile Include="Models\Intervals.cs" />
     <Compile Include="Models\PaymentMethods.cs" />
@@ -198,6 +201,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

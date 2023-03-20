@@ -15,5 +15,9 @@ namespace technicalChallenge.Models
 
         [StringLength(10)]
         public string intervalName { get; set; }
+
+        [Column(TypeName = "numeric")]
+
+        public decimal months { get; set; }
     }
 }

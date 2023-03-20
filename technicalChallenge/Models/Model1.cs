@@ -17,7 +17,6 @@ namespace technicalChallenge
         public virtual DbSet<Intervals> Intervals { get; set; }
         public virtual DbSet<PaymentMethods> PaymentMethods { get; set; }
         public virtual DbSet<Subscriptions> Subscriptions { get; set; }
-        public virtual DbSet<ViewSubscriptions> ViewSubscriptions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,7 +25,7 @@ namespace technicalChallenge
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<Donations>()
-                .Property(e => e.idSubscriptor)
+                .Property(e => e.idSubscription)
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<Donations>()
@@ -50,7 +49,7 @@ namespace technicalChallenge
                 .IsFixedLength();
 
             modelBuilder.Entity<Subscriptions>()
-                .Property(e => e.idSubscriptor)
+                .Property(e => e.idSubscription)
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<Subscriptions>()
@@ -68,26 +67,6 @@ namespace technicalChallenge
             modelBuilder.Entity<Subscriptions>()
                 .Property(e => e.numberCard)
                 .HasPrecision(18, 0);
-
-            modelBuilder.Entity<ViewSubscriptions>()
-                .Property(e => e.idSubscriptor)
-                .HasPrecision(18, 0);
-
-            modelBuilder.Entity<ViewSubscriptions>()
-                .Property(e => e.amount)
-                .HasPrecision(18, 0);
-
-            modelBuilder.Entity<ViewSubscriptions>()
-                .Property(e => e.interval)
-                .HasPrecision(2, 0);
-
-            modelBuilder.Entity<ViewSubscriptions>()
-                .Property(e => e.paymentMethod)
-                .HasPrecision(2, 0);
-
-            modelBuilder.Entity<ViewSubscriptions>()
-                .Property(e => e.TotalDonation)
-                .HasPrecision(38, 0);
         }
        
     }
